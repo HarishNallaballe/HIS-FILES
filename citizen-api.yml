@@ -1,1 +1,53 @@
-
+spring:
+    boot:
+      admin:
+         client:
+            url : http://localhost:1002
+    application:
+        name: "CITIZEN-API"
+    datasource:
+     driver-class-name: com.mysql.cj.jdbc.Driver
+     password: abcd
+     url: jdbc:mysql://localhost:3306/harish
+     username: root
+    jpa:
+     hibernate:
+       ddl-auto: update
+     show-sql: true
+#    mail:
+#     host : smtp.gmail.com
+#     port : 587
+#     username : harishnallaballe@gmail.com
+#     password : mtkw mhzv wjyi derp
+#     properties:
+#       mail:
+#         smtp:
+#           auth : true
+#           starttls:
+#              enable : true
+#            
+eureka:
+   client: 
+     service-url:
+      defaultZone: http://localhost:8761/eureka/        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+      enabled: true
+              
+              
+app:
+  messages:
+      PasswordSent : Password Sent to your Email
+      PasswordNotSent : Password Not Sent to your Email
+      CitizenSaved : Citizen Saved Successfully
+      CitizenNotSaved : Citizen not Saved
+      LoginSuccess : Login Success
+      LoginFailed : Invalid Credentials
+      RecoverPassword : Recover The Password
+      PasswordUpdated : Password Updated Successfully
+      PasswordNotUpdated : Password Not Updated
