@@ -6,7 +6,7 @@ spring:
         client:
           url: http://localhost:1002
     datasource:
-     driver-class-name: com.mysql.cj.jdbc.Driver
+     driver-class-name: com.mysql.jdbc.Driver
      password: abcd
      url: jdbc:mysql://localhost:3306/harish
      username: root
